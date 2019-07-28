@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>660,4857.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>630.4,2479.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -65,7 +65,7 @@
       <AssemblyReference>UiPath.Database</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ProcessData" sap:VirtualizedContainerService.HintSize="620,4777.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProcessData" sap:VirtualizedContainerService.HintSize="590.4,2399.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="age" />
       <Variable x:TypeArguments="x:String" Name="account" />
@@ -90,7 +90,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="581.6,4684.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="552,2306.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -98,13 +98,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="548,4453.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="518.4,2075.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;In PorcessData...&quot;]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="480,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;In PorcessData...&quot;]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -112,7 +112,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <Assign DisplayName="Initialise exception to null" sap:VirtualizedContainerService.HintSize="509.6,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign DisplayName="Initialise exception to null" sap:VirtualizedContainerService.HintSize="480,60" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="s:Exception">[out_SystemException]</OutArgument>
             </Assign.To>
@@ -120,7 +120,7 @@
               <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="Set Succeeded to False" sap:VirtualizedContainerService.HintSize="509.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign DisplayName="Set Succeeded to False" sap:VirtualizedContainerService.HintSize="480,60" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Boolean">[out_Succeeded]</OutArgument>
             </Assign.To>
@@ -128,7 +128,7 @@
               <InArgument x:TypeArguments="x:Boolean">False</InArgument>
             </Assign.Value>
           </Assign>
-          <Sequence DisplayName="Fetch Data" sap:VirtualizedContainerService.HintSize="509.6,652.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Fetch Data" sap:VirtualizedContainerService.HintSize="480,652.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,7 +140,7 @@
                 <OutArgument x:TypeArguments="x:String">[account]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[in_QueueItem.SpecificContent("Account").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[in_QueueItem.SpecificContent("account").ToString]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign sap:VirtualizedContainerService.HintSize="259.2,60" sap2010:WorkflowViewState.IdRef="Assign_8">
@@ -153,10 +153,10 @@
             </Assign>
             <Assign sap:VirtualizedContainerService.HintSize="259.2,60" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[age]</OutArgument>
+                <OutArgument x:TypeArguments="sd:DataTable">[invoiceUPCCode]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[in_QueueItem.SpecificContent("Age").ToString]</InArgument>
+                <InArgument x:TypeArguments="sd:DataTable">[in_QueueItem.SpecificContent("invoiceUPCCode")]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign sap:VirtualizedContainerService.HintSize="259.2,60" sap2010:WorkflowViewState.IdRef="Assign_9">
@@ -184,7 +184,7 @@
               </Assign.Value>
             </Assign>
           </Sequence>
-          <Sequence DisplayName="Database" sap:VirtualizedContainerService.HintSize="509.6,344.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Database" sap:VirtualizedContainerService.HintSize="480,344.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConnect" />
             </Sequence.Variables>
@@ -201,7 +201,7 @@
             </ui:ExecuteNonQuery>
             <ui:DatabaseDisconnect DatabaseConnection="[dbConnect]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="330.4,22.4" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
           </Sequence>
-          <Assign sap:VirtualizedContainerService.HintSize="509.6,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+          <Assign sap:VirtualizedContainerService.HintSize="480,60" sap2010:WorkflowViewState.IdRef="Assign_12">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[refrencePath]</OutArgument>
             </Assign.To>
@@ -209,8 +209,8 @@
               <InArgument x:TypeArguments="x:String">[in_ProjectConfig.Item("Unilever_refrencePath").ToString &amp; refNumber.ToString.Trim]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Directory" sap:VirtualizedContainerService.HintSize="509.6,22.4" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[refrencePath]" />
-          <Assign sap:VirtualizedContainerService.HintSize="509.6,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+          <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Directory" sap:VirtualizedContainerService.HintSize="480,22.4" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[refrencePath]" />
+          <Assign sap:VirtualizedContainerService.HintSize="480,60" sap2010:WorkflowViewState.IdRef="Assign_13">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[mappingFilePath]</OutArgument>
             </Assign.To>
@@ -218,133 +218,12 @@
               <InArgument x:TypeArguments="x:String">[refrencePath &amp; "\" &amp; refNumber &amp; "_mapping.xlsx"]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Navigate_Document_Search workflow" sap:VirtualizedContainerService.HintSize="509.6,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Navigate_Document_Search.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <scg:Dictionary x:TypeArguments="x:String, Argument" />
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Navigate_To_Document_Results workflow" sap:VirtualizedContainerService.HintSize="509.6,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Navigate_To_Document_Results.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_MappingFilePath">[mappingFilePath]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_MappinngSheetName">Vendor ID</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_DedAmount">[dedAmt]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Search_Document_Invoice workflow" sap:VirtualizedContainerService.HintSize="509.6,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Search_Document_Invoice.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_CustomerRefNr">[custRefNumber]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Download_Document workflow" sap:VirtualizedContainerService.HintSize="509.6,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Download_Document.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceFilePath">[refrencePath &amp; "\" &amp; refNumber &amp; "_invoice.pdf"]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ContinueOnError="True" DisplayName="Invoke Extract_pdf_Invoice workflow" sap:VirtualizedContainerService.HintSize="509.6,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Extract_Data_Invoice.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_ReferenceNumber">[invoiceReferenceNumber]</OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_BeginDate">[invoiceBeginDate]</OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_EndDate">[invoiceEndDate]</OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_SalesAmount" />
-              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_SalesAmount">[invoiceSalesAmount]</OutArgument>
-              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_UPC">[invoiceUPCCode]</OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_AdDate">[invoiceAdDate]</OutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceFilePath">[refrencePath &amp; "\" &amp; refNumber &amp; "_invoice.pdf"]</InArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_ProductName">[invoiceProductName]</OutArgument>
-              <OutArgument x:TypeArguments="x:Boolean" x:Key="out_invoiceContainsADDate">[invoiceContainsADDate]</OutArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <If Condition="[invoiceContainsADDate]" sap:VirtualizedContainerService.HintSize="509.6,209.6" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[invoiceContainsADDate]" sap:VirtualizedContainerService.HintSize="480,209.6" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Else>
               <Throw Exception="[New BusinessRuleException(&quot;Process Data : Invoice AD Date's date not found.&quot;)]" sap:VirtualizedContainerService.HintSize="216,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
             </If.Else>
           </If>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Navigate_VendorDeals_Review_Update workflow" sap:VirtualizedContainerService.HintSize="509.6,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Navigate_VendorDeals_Review_Update.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <scg:Dictionary x:TypeArguments="x:String, Argument" />
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Set_Review_Update_Worklist_Search_Criteria workflow" sap:VirtualizedContainerService.HintSize="509.6,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Set_Review_Update_Worklist_Search_Criteria.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_ReferenceNumber">[invoiceReferenceNumber]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_MappingFilePath">[mappingFilePath]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Navigate_Promotion_Nbr workflow" sap:VirtualizedContainerService.HintSize="509.6,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Navigate_Promotion_Nbr.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_ReferenceNumber">[invoiceReferenceNumber]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_BeginDate">[invoiceBeginDate]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[invoiceEndDate]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Navigate_Print_Deal workflow" sap:VirtualizedContainerService.HintSize="509.6,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Navigate_Print_Deal.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_DealRecapFilePath">[refrencePath &amp; "\" &amp; refNumber &amp; "_deal.pdf"]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <If Condition="[invoiceAdDate.Trim.Length &gt; 0]" sap:VirtualizedContainerService.HintSize="509.6,1109.6" sap2010:WorkflowViewState.IdRef="If_2">
-            <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="368.8,960" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Select_Dates_Numerator workflow" sap:VirtualizedContainerService.HintSize="330.4,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Select_Dates_Numerator.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_AdDate">[invoiceAdDate]</InArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Select_Retailer_Numerator workflow" sap:VirtualizedContainerService.HintSize="330.4,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Select_Retailer_Numerator.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_ReferenceNumber">[invoiceReferenceNumber]</InArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Select_Manufacture_Numerator workflow" sap:VirtualizedContainerService.HintSize="330.4,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Select_Manufacture_Numerator.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Select_Brand_Numerator workflow" sap:VirtualizedContainerService.HintSize="330.4,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Select_Brand_Numerator.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_ProductName">[invoiceProductName]</InArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Select_BrandName_Numerator workflow" sap:VirtualizedContainerService.HintSize="330.4,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Select_BrandName_Numerator.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_ProductName">[invoiceProductName]</InArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Download_Ads_Numerator_Dynamic workflow" sap:VirtualizedContainerService.HintSize="330.4,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Download_Ads_Numerator_Dynamic.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CreateShippingData workflow" sap:VirtualizedContainerService.HintSize="330.4,89.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="CreateShippingData.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <OutArgument x:TypeArguments="s:Exception" x:Key="out_SystemException">[out_SystemException]</OutArgument>
-                    <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Succeeded">[out_Succeeded]</OutArgument>
-                    <OutArgument x:TypeArguments="x:String" x:Key="out_ExceptionStage">[out_ExceptionStage]</OutArgument>
-                    <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="in_ProjectConfig">[in_ProjectConfig]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_SheetName">[in_ProjectConfig.Item("SippingSheetName").ToString]</InArgument>
-                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="inout_Top10Added">[top10Added]</InOutArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_Account">[account]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_RefNr">[refNumber]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_DedAmt">[dedAmt]</InArgument>
-                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_UPCCode">[invoiceUPCCode]</InArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-              </Sequence>
-            </If.Then>
-          </If>
-          <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="509.6,22.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_ProjectConfig.Item(&quot;USVD_QueueName_Deduction&quot;).ToString]" Reference="[refNumber]">
-            <ui:AddQueueItem.ItemInformation>
-              <InArgument x:TypeArguments="x:String" x:Key="refNumber">[refNumber]</InArgument>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="invoiceUPCCode">[invoiceUPCCode]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="invoiceAdDate">[invoiceAdDate]</InArgument>
-            </ui:AddQueueItem.ItemInformation>
-          </ui:AddQueueItem>
-          <Assign sap:VirtualizedContainerService.HintSize="509.6,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+          <Assign sap:VirtualizedContainerService.HintSize="480,60" sap2010:WorkflowViewState.IdRef="Assign_14">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Boolean">[out_Succeeded]</OutArgument>
             </Assign.To>
@@ -355,7 +234,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="551.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="521.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
